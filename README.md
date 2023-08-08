@@ -45,14 +45,48 @@ Manage plugins on a per server basis
 
 `!list-plugins`: returns a list of all plugins and their basic functionality
 
+`!sync`: universally sync slash commands to apply new changes
+
+### Debugging
+
+Manage plugins for all instances
+
+##### Usage:
+
+`!reload <plugin>`: reload plugin universally to apply new code changes to running bot
+
+`!load <plugin>`: load disabled/new plugin for running bot
+
+`!unload <plugin>`: universally disable plugin
+
 ### Callbacks
 
 Trigger automatic responses to key phrases in messages (supports gif links as responses)
 
 ##### Usage:
 
-`!callback add <trigger> <response>`: takes in what phrase should trigger a callback and what the bot should respond with
+`/!callback add <trigger> <response>`: takes in what phrase should trigger a callback and what the bot should respond with
 
-`!callback remove <trigger>`: removes the specified callback
+`/callback remove <trigger>`: removes the specified callback
 
-`!callback list`: returns a list of all existing callbacks
+`/callback disable <channel name>`: blacklist a channel so callback responses do not fire
+
+`/callback enable <channel name>`: re-enable callbacks in a blacklisted channel
+
+`/list`: returns a list of all existing callbacks and blacklisted channels
+
+### Movie Night
+
+Search for movies on imdb and output info in embeds, add movies with info from imdb to a movie night queue, pick a random movie from the queue to watch
+
+##### Usage:
+
+`/movies search <title>`: search imdb for a movie by title and return a discord embed with movie info
+
+`/movies add <title>`: add movie to the queue with data from imdb (each user can add one at a time)
+
+`/movies remove`: removes the user's current movie selection from the queue
+
+`/movies list`: list movies in queue and which user added them
+
+`/movies pick`: pick a random movie from the queue and return a discord embed with movie info
