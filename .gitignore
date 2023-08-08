@@ -1,0 +1,4 @@
+.env
+db/*
+plugins/__pycache__/
+!db/build_db.py
